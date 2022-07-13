@@ -103,7 +103,8 @@ En esta sección enumeramos los principales frameworks/bibliotecas utilizados pa
 Este Proyecto esta realizado por un grupo de estudiantes, a continuacion su contacto:
 
 Elian Ramirez:
-[![GithubER][Github]][Githuber]
+
+* [![GithubER][Github]][Githuber]
 
 
 <p align="right">(<a href="#top">Regresar al Inicio</a>)</p>
