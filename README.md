@@ -147,7 +147,7 @@ Don't forget to give the project a star! Thanks again!
 [Firebase-url]: https://firebase.google.com/
 # App ERP Practicas Laborales 2022 1
 
-Un nuevo proyecto de Flutter..
+APP ERP PL 2022 1: Es un proyecto de particas realizado por estudiantes de 7mo Semestre de la carrera de Ingenieria de Tecnologias de la Imformacion de la Universidad Tecnica de Machala.
 
 ## Getting Started
 
@@ -161,3 +161,4 @@ Algunos recursos para empezar si este es tu primer proyecto Flutter:
 Si necesitas ayuda para empezar a desarrollar Flutter, consulta la
 [documentación en línea](https://docs.flutter.dev/), que ofrece tutoriales,
 muestras, orientación sobre el desarrollo móvil y una referencia completa de la API.
+<p align="right">(<a href="#top">Regresar al Inicio</a>)</p>
