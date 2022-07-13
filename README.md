@@ -137,9 +137,7 @@ Don't forget to give the project a star! Thanks again!
 [issues-shield]: https://img.shields.io/github/issues/elian-c0de/app_erp_pp20221.svg?style=for-the-badge
 [issues-url]: https://github.com/elian-c0de/app_erp_pp20221/issues
 [license-shield]: https://img.shields.io/github/license/elian-c0de/app_erp_pp20221.svg?style=for-the-badge
-[license-url]: 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]:
 [product-screenshot]: images/screenshot.png
 [Flutter.dev]: https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white
 [Flutter-url]: https://flutter.dev/
