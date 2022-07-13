@@ -149,9 +149,9 @@ Don't forget to give the project a star! Thanks again!
 [Firebase-url]: https://firebase.google.com/
 
 
-* [![Flutter][Flutter.dev]][Flutter-url]
-* [![Dart][Dart.dev]][Dart-url]
-* [![Firebase][Firebase.google.com]][Firebase-url]
+* [![Next][Flutter.dev]][Flutter-url]
+* [![React][Dart.dev]][Dart-url]
+* [![Vue][Firebase.google.com]][Firebase-url]
 # app_erp_pp20221
 
 A new Flutter project.
