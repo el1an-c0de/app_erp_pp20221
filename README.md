@@ -92,11 +92,11 @@ El proyecto sera realizado para el cliente de Pérez Cabrera Juan Pablo de la cu
 
 En esta sección enumeramos los principales frameworks/bibliotecas utilizados para el arranque del proyecto. 
 
-* [![Flutter][Flutter]][Flutter-url]
-* [![Dart][Dart]][Dart-url]
-* [![Firebase][Firebase]][Firebase-url]
+* [![Flutter][Flutter.dev]][Flutter-url]
+* [![Dart][Dart.dev]][Dart-url]
+* [![Firebase][Firebase.google.com]][Firebase-url]
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">Regresar al Inicio</a>)</p>
 
 
 <!-- USAGE EXAMPLES -->
@@ -106,7 +106,7 @@ Use this space to show useful examples of how a project can be used. Additional 
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
-<p align="right">(<a href="#top">Regresar al Iniciop</a>)</p>
+<p align="right">(<a href="#top">Regresar al Inicio</a>)</p>
 
 
 <!-- CONTRIBUTING -->
@@ -123,7 +123,7 @@ Don't forget to give the project a star! Thanks again!
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-<p align="right">(<a href="#top">Regresar al Iniciop</a>)</p>
+<p align="right">(<a href="#top">Regresar al Inicio</a>)</p>
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
@@ -141,14 +141,17 @@ Don't forget to give the project a star! Thanks again!
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]:
 [product-screenshot]: images/screenshot.png
-[Flutter]: https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white
+[Flutter.dev]: https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white
 [Flutter-url]: https://flutter.dev/
-[Dart]: https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white
+[Dart.dev]: https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white
 [Dart-url]: https://dart.dev/
-[Firebase]: https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white
+[Firebase.google.com]: https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white
 [Firebase-url]: https://firebase.google.com/
 
 
+* [![Flutter][Flutter.dev]][Flutter-url]
+* [![Dart][Dart.dev]][Dart-url]
+* [![Firebase][Firebase.google.com]][Firebase-url]
 # app_erp_pp20221
 
 A new Flutter project.
