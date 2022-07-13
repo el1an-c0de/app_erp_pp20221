@@ -101,8 +101,9 @@ En esta sección enumeramos los principales frameworks/bibliotecas utilizados pa
 ## Contributing
 
 Este Proyecto esta realizado por un grupo de estudiantes, a continuacion su contacto:
+
 Elian Ramirez:
-[![GithubER][Github]][https://github.com/elian-c0de?tab=repositories]
+[![GithubER][Github]][Githuber]
 
 
 <p align="right">(<a href="#top">Regresar al Inicio</a>)</p>
@@ -128,6 +129,7 @@ Elian Ramirez:
 [Firebase.google.com]: https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white
 [Firebase-url]: https://firebase.google.com/
 [Github]: https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white
+[Githuber]: https://github.com/elian-c0de?tab=repositories
 # App ERP Practicas Laborales 2022 1
 
 APP ERP PL 2022 1: Es un proyecto de particas realizado por estudiantes de 7mo Semestre de la carrera de Ingenieria de Tecnologias de la Imformacion de la Universidad Tecnica de Machala.
