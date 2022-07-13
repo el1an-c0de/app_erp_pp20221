@@ -95,6 +95,7 @@ En esta sección enumeramos los principales frameworks/bibliotecas utilizados pa
 * [![Flutter][Flutter]][Flutter-url]
 * [![Dart][Dart]][Dart-url]
 * [![Firebase][Firebase]][Firebase-url]
+* [![Firebase][https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white]][https://firebase.google.com/]
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
