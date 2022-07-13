@@ -145,24 +145,19 @@ Don't forget to give the project a star! Thanks again!
 [Dart-url]: https://dart.dev/
 [Firebase.google.com]: https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white
 [Firebase-url]: https://firebase.google.com/
+# App ERP Practicas Laborales 2022 1
 
-
-* [![Next][Flutter.dev]][Flutter-url]
-* [![React][Dart.dev]][Dart-url]
-* [![Vue][Firebase.google.com]][Firebase-url]
-# app_erp_pp20221
-
-A new Flutter project.
+Un nuevo proyecto de Flutter..
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Este proyecto es un punto de partida para una aplicación Flutter.
 
-A few resources to get you started if this is your first Flutter project:
+Algunos recursos para empezar si este es tu primer proyecto Flutter:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- [Lab: Crea tu primera aplicación Flutter](https://docs.flutter.dev/get-started/codelab)
+- [Cookbook: Ejemplos útiles de Flutter](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Si necesitas ayuda para empezar a desarrollar Flutter, consulta la
+[documentación en línea](https://docs.flutter.dev/), que ofrece tutoriales,
+muestras, orientación sobre el desarrollo móvil y una referencia completa de la API.
