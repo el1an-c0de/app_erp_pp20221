@@ -92,9 +92,9 @@ El proyecto sera realizado para el cliente de Pérez Cabrera Juan Pablo de la cu
 
 En esta sección enumeramos los principales frameworks/bibliotecas utilizados para el arranque del proyecto. 
 
-* [![Flutter][Flutter.js]][Flutter-url]
-* [![Dart][Dart.js]][Dart-url]
-* [![Firebase][Firebase.js]][Firebase-url]
+* [![Flutter][Flutter]][Flutter-url]
+* [![Dart][Dart]][Dart-url]
+* [![Firebase][Firebase]][Firebase-url]
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -224,23 +224,25 @@ Use this space to list resources you find helpful and would like to give credit 
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/elian-c0de/app_erp_pp20221.svg?style=for-the-badge
 [contributors-url]: https://github.com/elian-c0de/app_erp_pp20221/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/elian-c0de/app_erp_pp20221.svg?style=for-the-badge
 [forks-url]: https://github.com/elian-c0de/app_erp_pp20221/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/elian-c0de/app_erp_pp20221.svg?style=for-the-badge
 [stars-url]: https://github.com/elian-c0de/app_erp_pp20221/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/elian-c0de/app_erp_pp20221.svg?style=for-the-badge
 [issues-url]: https://github.com/elian-c0de/app_erp_pp20221/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/elian-c0de/app_erp_pp20221.svg?style=for-the-badge
 [license-url]: 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]:
 [product-screenshot]: images/screenshot.png
-[Flutter.js]: https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white
+[Flutter]: https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white
 [Flutter-url]: https://flutter.dev/
-[Dart.js]: https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white
+[Dart]: https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white
 [Dart-url]: https://dart.dev/
-[Firebase.js]: https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white
+[Firebase]: https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white
 [Firebase-url]: https://firebase.google.com/
+
+
 # app_erp_pp20221
 
 A new Flutter project.
