@@ -29,8 +29,6 @@
   <p align="center">
     ERP creado con Flutter-Dart!
     <br />
-    <a href="https://github.com/elian-c0de?tab=repositories"><strong>Explora mis repositorios »</strong></a>
-    <br />
     <br />
     <a href="">View Demo</a>
     ·
@@ -102,11 +100,10 @@ En esta sección enumeramos los principales frameworks/bibliotecas utilizados pa
 <!-- CONTRIBUTING -->
 ## Contributing
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Este Proyecto esta realizado por un grupo de estudiantes, a continuacion su contacto:
+Elian Ramirez:
+[![GithubER][Github]][https://github.com/elian-c0de?tab=repositories]
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 <p align="right">(<a href="#top">Regresar al Inicio</a>)</p>
 
@@ -130,6 +127,7 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 [Dart-url]: https://dart.dev/
 [Firebase.google.com]: https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white
 [Firebase-url]: https://firebase.google.com/
+[Github]: https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white
 # App ERP Practicas Laborales 2022 1
 
 APP ERP PL 2022 1: Es un proyecto de particas realizado por estudiantes de 7mo Semestre de la carrera de Ingenieria de Tecnologias de la Imformacion de la Universidad Tecnica de Machala.
