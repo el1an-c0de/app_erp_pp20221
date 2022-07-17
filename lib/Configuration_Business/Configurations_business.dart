@@ -4,8 +4,14 @@ import 'package:motion_tab_bar_v2/motion-badge.widget.dart';
 import 'package:motion_tab_bar_v2/motion-tab-bar.dart';
 import 'package:motion_tab_bar_v2/motion-tab-item.dart';
 
-class Configurations extends StatelessWidget {
-  const Configurations({Key? key}) : super(key: key);
+class Configurations_business extends StatefulWidget {
+  const Configurations_business({Key? key}) : super(key: key);
+
+  @override
+  State<Configurations_business> createState() => _Configurations_businessState();
+}
+
+class _Configurations_businessState extends State<Configurations_business> {
   @override
   @override
   Widget build(BuildContext context) {
@@ -14,7 +20,7 @@ class Configurations extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Administración de Usuarios'),
+      home: const MyHomePage(title: 'Administración de Empresas'),
     );
   }
 }

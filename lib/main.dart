@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'Configuration_Business/Configurations_business.dart';
 import 'Configuration_Users/Configurations.dart';
 
 void main() {
@@ -34,8 +35,17 @@ class MyHomePage extends StatefulWidget {
 void onSelected(BuildContext context, int item) {
   switch (item) {
     case 0:
+
       Navigator.of(context).push(
-        MaterialPageRoute(builder: (context) => Configurations()),
+        MaterialPageRoute(
+          builder: (context) => Configurations()),
+      );
+      break;
+      case 1:
+
+      Navigator.of(context).push(
+        MaterialPageRoute(
+          builder: (context) => Configurations_business()),
       );
       break;
   }
@@ -74,6 +84,17 @@ class _MyHomePageState extends State<MyHomePage> {
                       Icon(Icons.supervised_user_circle_outlined),
                       const SizedBox(width: 8),
                       Text('Administrar Usuarios'),
+                    ],
+                  ),
+                ),
+                PopupMenuDivider(),
+                PopupMenuItem<int>(
+                  value: 1,
+                  child: Row(
+                    children: [
+                      Icon(Icons.business_rounded),
+                      const SizedBox(width: 8),
+                      Text('Administrar Empresas'),
                     ],
                   ),
                 ),
