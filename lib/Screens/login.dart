@@ -47,14 +47,14 @@ class Body extends StatelessWidget {
               vertical: MediaQuery.of(context).size.height / 6),
           child: Container(
             width: 350,
-            child: _formLogin(),
+            child: _formLogin(context),
           ),
         )
       ],
     );
   }
 
-  Widget _formLogin() {
+  Widget _formLogin(BuildContext context) {
     return Column(
       children: [
         TextField(
@@ -76,11 +76,12 @@ class Body extends StatelessWidget {
         ),
         SizedBox(height: 30),
         TextField(
+          obscureText: true,
           decoration: InputDecoration(
-            hintText: 'Password',
+            hintText: '*******',
             counterText: 'Forgot password?',
             suffixIcon: const Icon(
-              Icons.visibility_off_outlined,
+              Icons.lock_outline_rounded,
               color: Colors.grey,
             ),
             filled: true,
@@ -115,7 +116,7 @@ class Body extends StatelessWidget {
                 width: double.infinity,
                 height: 50,
                 child: Center(child: Text("Sign In"))),
-            onPressed: () => print("Screen2"),
+            onPressed: () => Navigator.pushNamed(context, '/SignInEmpresa'),
             style: ElevatedButton.styleFrom(
               primary: Colors.deepPurple,
               onPrimary: Colors.white,

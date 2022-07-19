@@ -1,3 +1,6 @@
+import 'package:app_erp_pp20221/Screens/combo.dart';
+import 'package:app_erp_pp20221/Screens/screen2.dart';
+import 'package:app_erp_pp20221/Screens/screen3.dart';
 import 'package:app_erp_pp20221/Screens/screens.dart';
 
 void main() {
@@ -16,10 +19,17 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(),
+      initialRoute: '/SignIn',
+      routes: {
+        '/SignIn': ( _ ) => MyHomePage(),
+        '/SignInEmpresa': ( _ ) => SignInBusiness(),
+        '/screen3': ( _ ) => Screen3routes(), 
+      },
+      //home: MyHomePage(),
     );
   }
 }
+
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({Key? key}) : super(key: key);
@@ -39,3 +49,41 @@ class MyHomePage extends StatelessWidget {
     );
   }
 }
+
+class SignInBusiness extends StatelessWidget{
+  const SignInBusiness({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: ListView(
+        padding: EdgeInsets.symmetric(
+            horizontal: MediaQuery.of(context).size.width / 8),
+        children: [
+            NavBar(),
+            Screen2(),
+            Footer(),
+        ],
+      ),
+    );
+  }
+
+}
+
+
+class Screen3routes extends StatelessWidget{
+  const Screen3routes({Key? key}) : super(key: key);
+  
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: Combo(), 
+    );
+  }
+
+}
+

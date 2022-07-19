@@ -28,7 +28,7 @@ class Menu extends StatelessWidget {
           ),
           Row(
             children: [
-              _menuItem(title: 'Sign In', isActive: true),
+              _menuItem(title: 'Sign In', isActive: true),  
               _registerButton()
             ],
           ),
