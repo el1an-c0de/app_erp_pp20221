@@ -1,6 +1,4 @@
-import 'package:app_erp_pp20221/Screens/combo.dart';
-import 'package:app_erp_pp20221/Screens/screen2.dart';
-import 'package:app_erp_pp20221/Screens/screen3.dart';
+import 'package:app_erp_pp20221/Screens/EnvironmentRoles.dart';
 import 'package:app_erp_pp20221/Screens/screens.dart';
 
 void main() {
@@ -22,7 +20,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/SignIn',
       routes: {
         '/SignIn': ( _ ) => MyHomePage(),
-        '/SignInEmpresa': ( _ ) => SignInBusiness(),
+        '/EnvironmentRoles': ( _ ) => SignInBusiness(),
         '/screen3': ( _ ) => Screen3routes(), 
       },
       //home: MyHomePage(),
@@ -50,20 +48,39 @@ class MyHomePage extends StatelessWidget {
   }
 }
 
+class SignInBusiness1 extends StatelessWidget{
+  const SignInBusiness1({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: ListView(
+        padding: EdgeInsets.symmetric(
+            horizontal: MediaQuery.of(context).size.width / 8),
+        children: [
+            NavBar(),
+            SignInBusiness(),
+            Footer(),
+        ],
+      ),
+    );
+  }
+}
+
 class SignInBusiness extends StatelessWidget{
   const SignInBusiness({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      title: 'JD EDWARS ENTERPRISEONE ENVIRONMENT AND ROLES',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Screen2(), 
+      home: EnvironmentRoles(),
     );
   }
-
 }
 
 
@@ -78,7 +95,7 @@ class Screen3routes extends StatelessWidget{
             horizontal: MediaQuery.of(context).size.width / 8),
         children: [
             NavBar(),
-            Screen2(),
+            Screen3(),
             Footer(),
         ],
       ),
