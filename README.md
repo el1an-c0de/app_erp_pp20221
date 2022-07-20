@@ -43,6 +43,7 @@
 [![Product Name Screen Shot][product-screenshot]]()
 
 Guardar Pubspec.yam para eliminar los errores
+
 La importancia de tener el control de tus recursos empresariales en fundamental dentro de un negocio, y aun mayor si es usado de manera web, utilizando nuevas tecnologias que van en aumento, un ERP funcional, listo para usar en cualquier dispositivo y sobre todo de facil uso.
 
 Por que?:
