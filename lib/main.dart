@@ -55,16 +55,12 @@ class SignInBusiness extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: ListView(
-        padding: EdgeInsets.symmetric(
-            horizontal: MediaQuery.of(context).size.width / 8),
-        children: [
-            NavBar(),
-            Screen2(),
-            Footer(),
-        ],
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
       ),
+      home: Screen2(), 
     );
   }
 
@@ -76,12 +72,16 @@ class Screen3routes extends StatelessWidget{
   
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+    return Scaffold(
+      body: ListView(
+        padding: EdgeInsets.symmetric(
+            horizontal: MediaQuery.of(context).size.width / 8),
+        children: [
+            NavBar(),
+            Screen2(),
+            Footer(),
+        ],
       ),
-      home: Combo(), 
     );
   }
 
