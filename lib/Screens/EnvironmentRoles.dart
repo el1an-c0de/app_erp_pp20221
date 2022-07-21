@@ -24,9 +24,8 @@ class Body extends State<DropDownPage> {
       children: [
         Padding(
           padding: EdgeInsets.symmetric(
-              horizontal: MediaQuery.of(context).size.width/7,
-              vertical: MediaQuery.of(context).size.height/6
-          ),
+              horizontal: MediaQuery.of(context).size.width / 7,
+              vertical: MediaQuery.of(context).size.height / 6),
           child: Container(
             width: 950,
             child: _formLogin(context),
@@ -73,7 +72,13 @@ Widget _formLogin(BuildContext context) {
                 validator: (value) =>
                     value == "Role" ? "campo requerido" : null,
                 value: gender,
-                items: ["Role", "Todas mis Funciones", "Agencia Cuenca", "Menuadmin", "Sysadmin",]
+                items: [
+                  "Role",
+                  "Todas mis Funciones",
+                  "Agencia Cuenca",
+                  "Menuadmin",
+                  "Sysadmin",
+                ]
                     .map((v) => DropdownMenuItem(
                           child: Text(v),
                           value: v,
@@ -125,7 +130,6 @@ Widget _formLogin(BuildContext context) {
   );
 }
 
-void setState(Null Function() param0) {
-}
+void setState(Null Function() param0) {}
 
 //------

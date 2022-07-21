@@ -28,7 +28,7 @@ class Menu extends StatelessWidget {
           ),
           Row(
             children: [
-              _menuItem(title: 'Sign In', isActive: true),  
+              _menuItem(title: 'Sign In', isActive: true),
               _registerButton()
             ],
           ),
@@ -84,7 +84,7 @@ class Menu extends StatelessWidget {
         ],
       ),
       child: Text(
-        'Register',
+        'Registro',
         style: TextStyle(
           fontWeight: FontWeight.bold,
           color: Colors.black54,

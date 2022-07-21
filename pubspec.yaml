@@ -36,6 +36,7 @@ dependencies:
   motion_tab_bar_v2: ^0.2.6
   footer: ^0.0.4
   dropdownfield: ^1.0.3
+  responsive_table: ^0.2.0+2
 
 dev_dependencies:
   flutter_test:
@@ -53,7 +54,13 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
-
+  fonts:
+    - family: DejaVuSans
+      fonts:
+        - asset: fonts/DejaVuSans.ttf
+    - family: popinns
+      fonts: 
+        - asset: fonts/Poppins_Medium.ttf
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.

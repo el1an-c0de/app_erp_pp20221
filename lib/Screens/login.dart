@@ -1,5 +1,7 @@
 import 'package:app_erp_pp20221/Screens/screens.dart';
 
+import 'Configurations.dart';
+
 class Login extends StatelessWidget {
   const Login({Key? key}) : super(key: key);
 
@@ -33,8 +35,7 @@ class Body extends StatelessWidget {
               Image(image: AssetImage('images/logo-home.png'), width: 300),
               Text(
                 "This system is intended for limited (autorized) use and is sibkect to company policies.",
-                style: TextStyle(
-                    fontWeight: FontWeight.bold),
+                style: TextStyle(fontWeight: FontWeight.bold),
               ),
               SizedBox(
                 height: 30,
@@ -129,6 +130,13 @@ class Body extends StatelessWidget {
         SizedBox(height: 40),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        ),
+        TextButton(
+          style: TextButton.styleFrom(
+            textStyle: const TextStyle(fontSize: 12),
+          ),
+          onPressed: () => Navigator.pushNamed(context, '/Configurations'),
+          child: const Text('Configuracion de Usuarios'),
         ),
       ],
     );
