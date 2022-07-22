@@ -1,7 +1,4 @@
-import 'package:app_erp_pp20221/layout/Tabla_layout.dart';
 import '../Screens/screens.dart';
-import '../Widget/responsive.dart';
-import 'TopAppBar.dart';
 
 class AppLayout extends StatelessWidget {
   final Widget content;

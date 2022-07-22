@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import '../Screens/screens.dart';
 
 class Styles {
   static Color scaffoldBackgroundColor = const Color(0xFFe0efff);

@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart';
-import '../layout/app_layout.dart';
+import '../Screens/screens.dart';
 
 class Configurations extends StatelessWidget {
   const Configurations({Key? key}) : super(key: key);

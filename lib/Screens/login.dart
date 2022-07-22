@@ -60,18 +60,6 @@ class _formLogin extends StatelessWidget {
   //Controladores para la validacion de cada uno de los labels
   final TextEditingController usernamecontroller = new TextEditingController();
   final TextEditingController passwordcontroller = new TextEditingController();
-  //Ocultar contraseña del label Password (Obsoleto)
-  // bool isHiddenPassword = true;
-  // void _togglePasswordView() {
-  //   if(isHiddenPassword = true){
-  //     isHiddenPassword =false;
-  //   }else{
-  //     isHiddenPassword =true;
-  //   }
-  //   // setState(() {
-  //   //   isHiddenPassword = !isHiddenPassword;
-  //   // });
-  // }
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -102,13 +90,6 @@ class _formLogin extends StatelessWidget {
                 hintText: '********',
                 labelText: 'Enter Password',
                 suffixIcon: Icons.lock_outline_rounded,
-                //InkWell es el widget de material en flutter. Responde a la acción táctil realizada por el usuario
-                // suffixIcon: InkWell(
-                //   onTap: _togglePasswordView,
-                //   child: Icon(
-                //     isHiddenPassword ? Icons.visibility : Icons.visibility_off,
-                //   ),
-                // ),
               ),
               autovalidateMode: AutovalidateMode.onUserInteraction,
                 validator: (value)=> value != null && value.length <8
@@ -136,7 +117,7 @@ class _formLogin extends StatelessWidget {
               decoration: BoxDecorations.authBoxDecoration(),
             ),
 
-            SizedBox(height: 40),
+            SizedBox(height: 20),
 
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,

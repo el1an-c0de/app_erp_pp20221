@@ -1,8 +1,4 @@
-import 'package:flutter/material.dart';
-
-import '../Styles/styles.dart';
-import 'currency_text.dart';
-import 'responsive.dart';
+import '../Screens/screens.dart';
 
 class BarChartWithTitle extends StatelessWidget {
   final String title;

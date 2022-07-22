@@ -1,6 +1,4 @@
-import 'dart:math';
-import 'package:flutter/material.dart';
-import 'package:responsive_table/responsive_table.dart';
+import '../Screens/screens.dart';
 
 class Tabla_layout extends StatelessWidget {
   @override

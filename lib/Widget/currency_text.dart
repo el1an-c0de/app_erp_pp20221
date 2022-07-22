@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import '../Screens/screens.dart';
 
 class CurrencyText extends StatelessWidget {
   final String subtitle;

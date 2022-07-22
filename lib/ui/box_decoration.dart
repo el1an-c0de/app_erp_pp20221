@@ -3,8 +3,8 @@ import '../Screens/screens.dart';
 class BoxDecorations{
   static BoxDecoration authBoxDecoration({
     Color? color
-  }
-  ){
+  })
+  {
     return BoxDecoration(
       color: Colors.blue,
       borderRadius: BorderRadius.circular(30),
