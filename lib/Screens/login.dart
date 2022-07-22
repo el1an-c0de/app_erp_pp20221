@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
-
-import 'Configurations.dart';
+import '../Screens/screens.dart';
 
 class Login extends StatelessWidget {
   const Login({Key? key}) : super(key: key);
@@ -11,6 +9,7 @@ class Login extends StatelessWidget {
   }
 }
 
+//Clase donde visualizamos los textos de inicio y llamamos al formulario de login
 class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -48,156 +47,110 @@ class Body extends StatelessWidget {
               vertical: MediaQuery.of(context).size.height / 6),
           child: Container(
             width: 350,
-            child: _formLogin(context),
+            child: _formLogin(), //Llamamos a la funcion donde se encunetra el formulario de Login
           ),
         )
       ],
     );
   }
+}
 
+//Formulario de Login, con sus lables y button para dirigirnos a la siguiente vista
+class _formLogin extends StatelessWidget {
+  //Controladores para la validacion de cada uno de los labels
   final TextEditingController usernamecontroller = new TextEditingController();
   final TextEditingController passwordcontroller = new TextEditingController();
-  bool isHiddenPassword = true;
-
-  Widget _formLogin(BuildContext context) {
-    void _togglePasswordView() {
-      if(isHiddenPassword = true){
-        isHiddenPassword =false;
-      }else{
-        isHiddenPassword =true;
-      }
-      // setState(() {
-      //   isHiddenPassword = !isHiddenPassword;
-      // });
-    }
-
-    return Column(
-      children: [
-        TextField(
-          controller: usernamecontroller,
-          decoration: InputDecoration(
-            hintText: 'Enter User ID',
-            filled: true,
-            fillColor: Colors.blueGrey[50],
-            labelStyle: TextStyle(fontSize: 12),
-            contentPadding: EdgeInsets.only(left: 30),
-            enabledBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: Color.fromARGB(255, 236, 239, 241)),
-              borderRadius: BorderRadius.circular(15),
-            ),
-            focusedBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: Color.fromARGB(255, 236, 239, 241)),
-              borderRadius: BorderRadius.circular(15),
-            ),
-          ),
-        ),
-        SizedBox(height: 30),
-        TextField(
-          controller: passwordcontroller,
-          obscureText: isHiddenPassword,
-          decoration: InputDecoration(
-            hintText: 'Password',
-            counterText: 'Forgot password?',
-            //InkWell es el widget de material en flutter. Responde a la acción táctil realizada por el usuario
-            suffixIcon: InkWell(
-              onTap: _togglePasswordView,
-              child: Icon(
-                isHiddenPassword ? Icons.visibility : Icons.visibility_off,
-              ),
-            ),
-            filled: true,
-            fillColor: Colors.blueGrey[50],
-            labelStyle: TextStyle(fontSize: 12),
-            contentPadding: EdgeInsets.only(left: 30),
-            enabledBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: Color.fromARGB(255, 236, 239, 241)),
-              borderRadius: BorderRadius.circular(15),
-            ),
-            focusedBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: Color.fromARGB(255, 236, 239, 241)),
-              borderRadius: BorderRadius.circular(15),
-            ),
-          ),
-        ),
-        SizedBox(height: 40),
-        Container(
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(30),
-            boxShadow: const [
-              BoxShadow(
-                color: Color.fromARGB(255, 209, 196, 233),
-                spreadRadius: 10,
-                blurRadius: 20,
-              ),
-            ],
-          ),
-          child: ElevatedButton(
-            child: Container(
-                width: double.infinity,
-                height: 50,
-                child: Center(child: Text("Sign In"))),
-            onPressed: () => Navigator.pushNamed(context, '/EnviromentRoles'),
-            style: ElevatedButton.styleFrom(
-              primary: Colors.deepPurple,
-              onPrimary: Colors.white,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(15),
-              ),
-            ),
-          ),
-        ),
-        SizedBox(height: 40),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        ),
-        TextButton(
-          style: TextButton.styleFrom(
-            textStyle: const TextStyle(fontSize: 12),
-          ),
-          onPressed: () => Navigator.pushNamed(context, '/Configurations'),
-          child: const Text('Configuracion de Usuarios'),
-        ),
-      ],
-    );
-  }
-
-  Widget _loginWithButton({bool isActive = false}) {
+  //Ocultar contraseña del label Password (Obsoleto)
+  // bool isHiddenPassword = true;
+  // void _togglePasswordView() {
+  //   if(isHiddenPassword = true){
+  //     isHiddenPassword =false;
+  //   }else{
+  //     isHiddenPassword =true;
+  //   }
+  //   // setState(() {
+  //   //   isHiddenPassword = !isHiddenPassword;
+  //   // });
+  // }
+  @override
+  Widget build(BuildContext context) {
     return Container(
-      width: 90,
-      height: 70,
-      decoration: isActive
-          ? BoxDecoration(
-              color: Colors.white,
-              boxShadow: const [
-                BoxShadow(
-                  color: Color.fromARGB(255, 224, 224, 224),
-                  spreadRadius: 10,
-                  blurRadius: 30,
-                )
-              ],
-              borderRadius: BorderRadius.circular(15),
-            )
-          : BoxDecoration(
-              borderRadius: BorderRadius.circular(15),
-              border: Border.all(color: Color.fromARGB(255, 189, 189, 189)),
+      child: Form(
+        child: Column(
+          children: [
+            TextFormField(
+              controller: usernamecontroller,
+              autocorrect: false,
+              keyboardType: TextInputType.emailAddress,
+              //Llamamos a la clase InputDecorations para usar el estilo de esa clase
+              decoration: InputDecorations.authInputDecoration(
+                hintText: 'Example123',
+                labelText: 'Enter User ID',
+                suffixIcon: Icons.alternate_email_rounded,
+              ),
             ),
-      child: Center(
-          child: Container(
-        decoration: isActive
-            ? BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(35),
-                boxShadow: const [
-                  BoxShadow(
-                    color: Color.fromARGB(255, 189, 189, 189),
-                    spreadRadius: 2,
-                    blurRadius: 15,
-                  )
-                ],
-              )
-            : const BoxDecoration(),
-      )),
+
+            SizedBox(height: 30),
+
+            TextFormField(
+              controller: passwordcontroller,
+              obscureText: true, //Ocultar text del label password
+              autocorrect: false,
+              keyboardType: TextInputType.emailAddress,
+              //Llamamos a la clase InputDecorations para usar el estilo de esa clase
+              decoration: InputDecorations.authInputDecoration(
+                hintText: '********',
+                labelText: 'Enter Password',
+                suffixIcon: Icons.lock_outline_rounded,
+                //InkWell es el widget de material en flutter. Responde a la acción táctil realizada por el usuario
+                // suffixIcon: InkWell(
+                //   onTap: _togglePasswordView,
+                //   child: Icon(
+                //     isHiddenPassword ? Icons.visibility : Icons.visibility_off,
+                //   ),
+                // ),
+              ),
+              autovalidateMode: AutovalidateMode.onUserInteraction,
+                validator: (value)=> value != null && value.length <8
+                  ? 'Ingresa un minimo de 8 caracteres' : null,
+            ),
+
+            SizedBox(height: 40),
+
+            Container(
+              child: ElevatedButton(
+                child:Container(
+                    width: double.infinity,
+                    height: 50,
+                    child: Center(child: Text("Sign In"))),
+                onPressed: () => Navigator.pushNamed(context, '/EnviromentRoles'),
+                //Diseño Antiguo
+                // style: ElevatedButton.styleFrom(
+                //   primary: Colors.blue,
+                //   onPrimary: Colors.white,
+                //   shape: RoundedRectangleBorder(
+                //     borderRadius: BorderRadius.circular(15),
+                //   ),
+                // ),
+              ),
+              decoration: BoxDecorations.authBoxDecoration(),
+            ),
+
+            SizedBox(height: 40),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            ),
+            TextButton(
+              style: TextButton.styleFrom(
+                textStyle: const TextStyle(fontSize: 12),
+              ),
+              onPressed: () => Navigator.pushNamed(context, '/Configurations'),
+              child: const Text('Configuracion de Usuarios'),
+            ),
+          ],
+        )
+      ),
     );
   }
 }

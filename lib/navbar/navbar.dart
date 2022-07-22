@@ -48,7 +48,7 @@ class Menu extends StatelessWidget {
               '$title',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
-                color: isActive ? Colors.deepPurple : Colors.grey,
+                color: isActive ? Colors.blue : Colors.grey,
               ),
             ),
             SizedBox(
@@ -58,7 +58,7 @@ class Menu extends StatelessWidget {
                 ? Container(
                     padding: EdgeInsets.symmetric(horizontal: 12, vertical: 2),
                     decoration: BoxDecoration(
-                      color: Colors.deepPurple,
+                      color: Colors.blue,
                       borderRadius: BorderRadius.circular(30),
                     ),
                   )

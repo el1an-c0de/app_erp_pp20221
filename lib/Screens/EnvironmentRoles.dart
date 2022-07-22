@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import '../Screens/screens.dart';
 
 class EnviromentRoles extends StatefulWidget {
   EnviromentRoles({Key? key}) : super(key: key);
@@ -69,20 +69,9 @@ class _LoginScreensState extends State<EnviromentRoles> {
       children: [
         TextField(
           controller: Environment,
-          decoration: InputDecoration(
-            hintText: 'Environment',
-            filled: true,
-            fillColor: Colors.blueGrey[50],
-            labelStyle: TextStyle(fontSize: 12),
-            contentPadding: EdgeInsets.only(left: 30),
-            enabledBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: Color.fromARGB(255, 236, 239, 241)),
-              borderRadius: BorderRadius.circular(15),
-            ),
-            focusedBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: Color.fromARGB(255, 236, 239, 241)),
-              borderRadius: BorderRadius.circular(15),
-            ),
+          decoration: InputDecorations.authInputDecoration(
+            hintText: ' ',
+            labelText: 'Environment',
           ),
         ),
         SizedBox(height: 30),
@@ -92,7 +81,7 @@ class _LoginScreensState extends State<EnviromentRoles> {
           elevation: 16,
           isExpanded: true,
           icon: Icon(Icons.business_rounded),
-          iconEnabledColor: Colors.deepPurple,
+          iconEnabledColor: Colors.blue,
           underline: Container(
             decoration: const ShapeDecoration(
               shape: RoundedRectangleBorder(
@@ -116,20 +105,9 @@ class _LoginScreensState extends State<EnviromentRoles> {
         SizedBox(height: 30),
         TextField(
           controller: Description,
-          decoration: InputDecoration(
-            hintText: 'Description',
-            filled: true,
-            fillColor: Colors.blueGrey[50],
-            labelStyle: TextStyle(fontSize: 12),
-            contentPadding: EdgeInsets.only(left: 30),
-            enabledBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: Color.fromARGB(255, 236, 239, 241)),
-              borderRadius: BorderRadius.circular(15),
-            ),
-            focusedBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: Color.fromARGB(255, 236, 239, 241)),
-              borderRadius: BorderRadius.circular(15),
-            ),
+          decoration: InputDecorations.authInputDecoration(
+            hintText: ' ',
+            labelText: 'Description',
           ),
         ),
          SizedBox(height: 40),
