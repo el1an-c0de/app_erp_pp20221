@@ -1,135 +1,182 @@
-import 'package:app_erp_pp20221/Screens/screens.dart';
-import 'OnHover.dart';
+import 'package:flutter/material.dart';
 
-class EnvironmentRoles extends StatelessWidget {
-  const EnvironmentRoles({Key? key}) : super(key: key);
+class EnviromentRoles extends StatefulWidget {
+  EnviromentRoles({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    return DropDownPage();
-  }
+  State<EnviromentRoles> createState() => _LoginScreensState();
 }
 
-class DropDownPage extends StatefulWidget {
-  const DropDownPage({Key? key}) : super(key: key);
-  @override
-  Body createState() => Body();
-}
+class _LoginScreensState extends State<EnviromentRoles> {
+  final _formkey = GlobalKey<FormState>();
 
-class Body extends State<DropDownPage> {
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
+        Container(
+          width: 600,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: const [
+              Text(
+                'ORACLE \nJD EDWARS ENTERPRISEONE',
+                style: TextStyle(
+                  fontSize: 45,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              Image(image: AssetImage('images/logo-home.png'), width: 300),
+              Text(
+                "This system is intended for limited (autorized) use and is sibkect to company policies.",
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+              SizedBox(
+                height: 30,
+              ),
+            ],
+          ),
+        ),
         Padding(
           padding: EdgeInsets.symmetric(
-              horizontal: MediaQuery.of(context).size.width / 7,
               vertical: MediaQuery.of(context).size.height / 6),
           child: Container(
-            width: 950,
-            child: _formLogin(context),
+            width: 350,
+            child: _formLoginBusiness(context),
           ),
         )
       ],
     );
   }
-}
 
-String gender = "Role";
-final _formKey = GlobalKey<FormState>();
-Widget _formLogin(BuildContext context) {
-  return Scaffold(
-    body: Center(
-      child: Form(
-        key: _formKey,
-        child: SizedBox(
-          width: 200,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              TextField(
-                decoration: InputDecoration(
-                  labelText: 'Environment',
-                  filled: true,
-                  fillColor: Colors.blueGrey[50],
-                  labelStyle: TextStyle(fontSize: 12),
-                  contentPadding: EdgeInsets.only(left: 30),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide:
-                        BorderSide(color: Color.fromARGB(255, 236, 239, 241)),
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide:
-                        BorderSide(color: Color.fromARGB(255, 236, 239, 241)),
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                ),
+  final TextEditingController Environment = new TextEditingController();
+  final TextEditingController Description = new TextEditingController();
+  List<String> items = [
+    "Role",
+    "Todas mis Funciones",
+    "Agencia Cuenca",
+    "Menuadmin",
+    "Sysadmin",
+  ];
+  String? selectedItem = "Role";
+
+  Widget _formLoginBusiness(BuildContext context) {
+    return Column(
+      children: [
+        TextField(
+          controller: Environment,
+          decoration: InputDecoration(
+            hintText: 'Environment',
+            filled: true,
+            fillColor: Colors.blueGrey[50],
+            labelStyle: TextStyle(fontSize: 12),
+            contentPadding: EdgeInsets.only(left: 30),
+            enabledBorder: OutlineInputBorder(
+              borderSide: BorderSide(color: Color.fromARGB(255, 236, 239, 241)),
+              borderRadius: BorderRadius.circular(15),
+            ),
+            focusedBorder: OutlineInputBorder(
+              borderSide: BorderSide(color: Color.fromARGB(255, 236, 239, 241)),
+              borderRadius: BorderRadius.circular(15),
+            ),
+          ),
+        ),
+        SizedBox(height: 30),
+        DropdownButton<String>(
+          borderRadius: BorderRadius.circular(15),
+          iconSize: 30,
+          elevation: 16,
+          isExpanded: true,
+          icon: Icon(Icons.business_rounded),
+          iconEnabledColor: Colors.deepPurple,
+          underline: Container(
+            decoration: const ShapeDecoration(
+              shape: RoundedRectangleBorder(
+                side: BorderSide(width: 1.0, style: BorderStyle.solid),
+                borderRadius: BorderRadius.all(Radius.circular(5.0)),
               ),
-              SizedBox(height: 30),
-              DropdownButtonFormField(
-                validator: (value) =>
-                    value == "Role" ? "campo requerido" : null,
-                value: gender,
-                items: [
-                  "Role",
-                  "Todas mis Funciones",
-                  "Agencia Cuenca",
-                  "Menuadmin",
-                  "Sysadmin",
-                ]
-                    .map((v) => DropdownMenuItem(
-                          child: Text(v),
-                          value: v,
-                        ))
-                    .toList(),
-                onChanged: (String? v) {
-                  setState(() {
-                    gender = v!;
-                  });
-                },
-              ),
-              SizedBox(height: 40),
-              Container(
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(30),
-                  boxShadow: const [
-                    BoxShadow(
-                      color: Color.fromARGB(255, 209, 196, 233),
-                      spreadRadius: 10,
-                      blurRadius: 20,
-                    ),
-                  ],
-                ),
-                child: ElevatedButton(
-                  child: Container(
-                      width: double.infinity,
-                      height: 50,
-                      child: Center(child: Text("OK"))),
-                  onPressed: () => Navigator.pushNamed(context, '/screen3'),
-                  style: ElevatedButton.styleFrom(
-                    primary: Colors.deepPurple,
-                    onPrimary: Colors.white,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                  ),
-                ),
-              ),
-              SizedBox(height: 40),
+            ),
+          ),
+          //borderSide :BorderSide(width:3, Color.fromARGB(255, 236, 239, 241)),
+          value: selectedItem,
+          items: items
+              .map((item) => DropdownMenuItem<String>(
+                    value: item,
+                    child: Text(item,
+                        style: TextStyle(
+                            color: Color.fromARGB(255, 0, 0, 0), fontSize: 12)),
+                  ))
+              .toList(),
+          onChanged: (item) => setState(() => selectedItem = item),
+        ),
+        SizedBox(height: 30),
+        TextField(
+          controller: Description,
+          decoration: InputDecoration(
+            hintText: 'Description',
+            filled: true,
+            fillColor: Colors.blueGrey[50],
+            labelStyle: TextStyle(fontSize: 12),
+            contentPadding: EdgeInsets.only(left: 30),
+            enabledBorder: OutlineInputBorder(
+              borderSide: BorderSide(color: Color.fromARGB(255, 236, 239, 241)),
+              borderRadius: BorderRadius.circular(15),
+            ),
+            focusedBorder: OutlineInputBorder(
+              borderSide: BorderSide(color: Color.fromARGB(255, 236, 239, 241)),
+              borderRadius: BorderRadius.circular(15),
+            ),
+          ),
+        ),
+         SizedBox(height: 40),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
               ),
             ],
-          ),
-        ),
-      ),
-    ),
-  );
+       );
+  }
+  Widget _loginWithButton({bool isActive = false}) {
+    return Container(
+      width: 90,
+      height: 70,
+      decoration: isActive
+          ? BoxDecoration(
+              color: Colors.white,
+              boxShadow: const [
+                BoxShadow(
+                  color: Color.fromARGB(255, 224, 224, 224),
+                  spreadRadius: 10,
+                  blurRadius: 30,
+                )
+              ],
+              borderRadius: BorderRadius.circular(15),
+            )
+          : BoxDecoration(
+              borderRadius: BorderRadius.circular(15),
+              border: Border.all(color: Color.fromARGB(255, 189, 189, 189)),
+            ),
+      child: Center(
+          child: Container(
+        decoration: isActive
+            ? BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(35),
+                boxShadow: const [
+                  BoxShadow(
+                    color: Color.fromARGB(255, 189, 189, 189),
+                    spreadRadius: 2,
+                    blurRadius: 15,
+                  )
+                ],
+              )
+            : const BoxDecoration(),
+      )),
+    );
+  }
 }
 
-void setState(Null Function() param0) {}
 
-//------

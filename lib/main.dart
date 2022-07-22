@@ -1,8 +1,8 @@
-import 'package:app_erp_pp20221/Screens/EnvironmentRoles.dart';
 import 'package:app_erp_pp20221/Screens/screens.dart';
+import 'package:app_erp_pp20221/Screens/environmentRoles.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -20,8 +20,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/SignIn',
       routes: {
         '/SignIn': (_) => MyHomePage(),
-        '/EnvironmentRoles': (_) => SignInBusiness(),
-        '/screen3': (_) => Screen3routes(),
+        '/EnviromentRoles': (_) => SignInBusiness(),
         '/Configurations': (_) => Configu(),
       },
       //home: MyHomePage(),
@@ -48,8 +47,8 @@ class MyHomePage extends StatelessWidget {
   }
 }
 
-class SignInBusiness1 extends StatelessWidget {
-  const SignInBusiness1({Key? key}) : super(key: key);
+class SignInBusiness extends StatelessWidget {
+  const SignInBusiness({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -59,7 +58,7 @@ class SignInBusiness1 extends StatelessWidget {
             horizontal: MediaQuery.of(context).size.width / 8),
         children: [
           NavBar(),
-          SignInBusiness(),
+          EnviromentRoles(),
           Footer(),
         ],
       ),
@@ -80,22 +79,6 @@ class Configu1 extends StatelessWidget {
   }
 }
 
-class SignInBusiness extends StatelessWidget {
-  const SignInBusiness({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'JD EDWARS ENTERPRISEONE ENVIRONMENT AND ROLES',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: EnvironmentRoles(),
-    );
-  }
-}
-
 class Configu extends StatelessWidget {
   const Configu({Key? key}) : super(key: key);
 
@@ -111,22 +94,20 @@ class Configu extends StatelessWidget {
     );
   }
 }
-
-class Screen3routes extends StatelessWidget {
-  const Screen3routes({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: ListView(
-        padding: EdgeInsets.symmetric(
-            horizontal: MediaQuery.of(context).size.width / 8),
-        children: [
-          NavBar(),
-          Screen3(),
-          Footer(),
-        ],
-      ),
-    );
-  }
-}
+// class Screen3routes extends StatelessWidget {
+//   const Screen3routes({Key? key}) : super(key: key);
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       body: ListView(
+//         padding: EdgeInsets.symmetric(
+//             horizontal: MediaQuery.of(context).size.width / 8),
+//         children: [
+//           NavBar(),
+//           Screen3(),
+//           Footer(),
+//         ],
+//       ),
+//     );
+//   }
+// }

@@ -1,4 +1,4 @@
-import 'package:app_erp_pp20221/Screens/screens.dart';
+import 'package:flutter/material.dart';
 
 import 'Configurations.dart';
 
@@ -55,10 +55,26 @@ class Body extends StatelessWidget {
     );
   }
 
+  final TextEditingController usernamecontroller = new TextEditingController();
+  final TextEditingController passwordcontroller = new TextEditingController();
+  bool isHiddenPassword = true;
+
   Widget _formLogin(BuildContext context) {
+    void _togglePasswordView() {
+      if(isHiddenPassword = true){
+        isHiddenPassword =false;
+      }else{
+        isHiddenPassword =true;
+      }
+      // setState(() {
+      //   isHiddenPassword = !isHiddenPassword;
+      // });
+    }
+
     return Column(
       children: [
         TextField(
+          controller: usernamecontroller,
           decoration: InputDecoration(
             hintText: 'Enter User ID',
             filled: true,
@@ -77,13 +93,17 @@ class Body extends StatelessWidget {
         ),
         SizedBox(height: 30),
         TextField(
-          obscureText: true,
+          controller: passwordcontroller,
+          obscureText: isHiddenPassword,
           decoration: InputDecoration(
-            hintText: '*******',
+            hintText: 'Password',
             counterText: 'Forgot password?',
-            suffixIcon: const Icon(
-              Icons.lock_outline_rounded,
-              color: Colors.grey,
+            //InkWell es el widget de material en flutter. Responde a la acción táctil realizada por el usuario
+            suffixIcon: InkWell(
+              onTap: _togglePasswordView,
+              child: Icon(
+                isHiddenPassword ? Icons.visibility : Icons.visibility_off,
+              ),
             ),
             filled: true,
             fillColor: Colors.blueGrey[50],
@@ -117,7 +137,7 @@ class Body extends StatelessWidget {
                 width: double.infinity,
                 height: 50,
                 child: Center(child: Text("Sign In"))),
-            onPressed: () => Navigator.pushNamed(context, '/EnvironmentRoles'),
+            onPressed: () => Navigator.pushNamed(context, '/EnviromentRoles'),
             style: ElevatedButton.styleFrom(
               primary: Colors.deepPurple,
               onPrimary: Colors.white,
