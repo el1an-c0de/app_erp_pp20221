@@ -1,4 +1,4 @@
-import '../Screens/screens.dart';
+import '../Screens/Screens.dart';
 
 class CurrencyText extends StatelessWidget {
   final String subtitle;

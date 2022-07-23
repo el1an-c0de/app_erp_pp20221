@@ -1,4 +1,4 @@
-import '../Screens/screens.dart';
+import '../Screens/Screens.dart';
 
 class AppLayout extends StatelessWidget {
   final Widget content;
@@ -19,9 +19,9 @@ class AppLayout extends StatelessWidget {
           const SizedBox(
             height: 10,
           ),
-          Expanded(
+          const Expanded(
             child: SafeArea(
-              child: Tabla_layout(),
+              child: Tablalayout(),
             ),
           ),
         ],
@@ -53,9 +53,9 @@ class AppLayout extends StatelessWidget {
                   const SizedBox(
                     height: 10,
                   ),
-                  Expanded(
+                  const Expanded(
                     child: SafeArea(
-                      child: Tabla_layout(),
+                      child: Tablalayout(),
                     ),
                   ),
                 ],

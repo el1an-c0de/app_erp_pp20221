@@ -1,4 +1,4 @@
-import '../Screens/screens.dart';
+import 'package:app_erp_pp20221/Screens/screens.dart';
 
 class EnviromentRoles extends StatelessWidget {
   const EnviromentRoles({Key? key}) : super(key: key);
@@ -7,19 +7,21 @@ class EnviromentRoles extends StatelessWidget {
   // State<EnviromentRoles> createState() => _LoginScreensState();
   @override
   Widget build(BuildContext context) {
-    return _LoginScreensState();
+    return const LoginScreensState();
   }
 }
 
-class _LoginScreensState extends StatelessWidget {
-  final _formkey = GlobalKey<FormState>();
+class LoginScreensState extends StatelessWidget {
+  // final _formkey = GlobalKey<FormState>();
+
+  const LoginScreensState({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Container(
+        SizedBox(
           width: 600,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -48,9 +50,9 @@ class _LoginScreensState extends StatelessWidget {
         Padding(
           padding: EdgeInsets.symmetric(
               vertical: MediaQuery.of(context).size.height / 6),
-          child: Container(
+          child: const SizedBox(
             width: 350,
-            child: _formLoginBusiness(),
+            child: FormLoginBusiness(),
           ),
         )
       ],
@@ -58,9 +60,18 @@ class _LoginScreensState extends StatelessWidget {
   }
 }
 
-class _formLoginBusiness extends StatelessWidget {
-  final TextEditingController Environment = new TextEditingController();
-  final TextEditingController Description = new TextEditingController();
+class FormLoginBusiness extends StatefulWidget {
+  const FormLoginBusiness({Key? key}) : super(key: key);
+
+  @override
+  State<FormLoginBusiness> createState() => _FormLoginBusinessState();
+}
+
+class _FormLoginBusinessState extends State<FormLoginBusiness> {
+  final TextEditingController Environment = TextEditingController();
+
+  final TextEditingController Description = TextEditingController();
+
   List<String> items = [
     "Role",
     "Todas mis Funciones",
@@ -68,79 +79,75 @@ class _formLoginBusiness extends StatelessWidget {
     "Menuadmin",
     "Sysadmin",
   ];
+
   String? selectedItem = "Role";
 
+  @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Form(
-        child: Column(
-          children: [
-            TextFormField(
-              controller: Environment,
-              autocorrect: false,
-              keyboardType: TextInputType.emailAddress,
-              //Llamamos a la clase InputDecorations para usar el estilo de esa clase
-              decoration: InputDecorations.authInputDecoration(
-                hintText: 'EnvironmentExample',
-                labelText: 'Environment',
-                suffixIcon: Icons.supervised_user_circle,
-              ),
+    return Form(
+      child: Column(
+        children: [
+          TextFormField(
+            controller: Environment,
+            autocorrect: false,
+            keyboardType: TextInputType.emailAddress,
+            //Llamamos a la clase InputDecorations para usar el estilo de esa clase
+            decoration: InputDecorations.authInputDecoration(
+              hintText: 'EnvironmentExample',
+              labelText: 'Environment',
+              suffixIcon: Icons.supervised_user_circle,
             ),
-            SizedBox(height: 30),
-            DropdownButton<String>(
-              borderRadius: BorderRadius.circular(15),
-              iconSize: 30,
-              elevation: 16,
-              isExpanded: true,
-              icon: Icon(Icons.business_rounded),
-              iconEnabledColor: Colors.blue,
-              underline: Container(
-                decoration: DropdownButtonDecoration.authDropdownButtonDecoration(),
-              ),
-              //borderSide :BorderSide(width:3, Color.fromARGB(255, 236, 239, 241)),
-              value: selectedItem,
-              items: items
-                  .map((item) => DropdownMenuItem<String>(
-                        value: item,
-                        child: Text(item,
-                            style: TextStyle(
-                                color: Color.fromARGB(255, 0, 0, 0),
-                                fontSize: 12)),
-                      ))
-                  .toList(),
-              onChanged: (item) => setState(() => selectedItem = item),
+          ),
+          const SizedBox(height: 30),
+          DropdownButton<String>(
+            borderRadius: BorderRadius.circular(15),
+            iconSize: 30,
+            elevation: 16,
+            isExpanded: true,
+            icon: const Icon(Icons.business_rounded),
+            iconEnabledColor: Colors.blue,
+            underline: Container(
+              decoration:
+                  DropdownButtonDecoration.authDropdownButtonDecoration(),
             ),
-            SizedBox(height: 30),
-            TextFormField(
-              controller: Description,
-              autocorrect: false,
-              keyboardType: TextInputType.emailAddress,
-              //Llamamos a la clase InputDecorations para usar el estilo de esa clase
-              decoration: InputDecorations.authInputDecoration(
-                hintText: 'DescriptionExample',
-                labelText: 'Description',
-                suffixIcon: Icons.business_sharp,
-              ),
+            //borderSide :BorderSide(width:3, Color.fromARGB(255, 236, 239, 241)),
+            value: selectedItem,
+            items: items
+                .map((item) => DropdownMenuItem<String>(
+                      value: item,
+                      child: Text(item,
+                          style: const TextStyle(
+                              color: Color.fromARGB(255, 0, 0, 0),
+                              fontSize: 12)),
+                    ))
+                .toList(),
+            onChanged: (item) => setState(() => selectedItem = item),
+          ),
+          const SizedBox(height: 30),
+          TextFormField(
+            controller: Description,
+            autocorrect: false,
+            keyboardType: TextInputType.emailAddress,
+            //Llamamos a la clase InputDecorations para usar el estilo de esa clase
+            decoration: InputDecorations.authInputDecoration(
+              hintText: 'DescriptionExample',
+              labelText: 'Description',
+              suffixIcon: Icons.business_sharp,
             ),
-            SizedBox(height: 40),
-            Container(
-              child: ElevatedButton(
-                child: Container(
-                    width: double.infinity,
-                    height: 50,
-                    child: Center(child: Text("Sign In"))),
-                onPressed: () =>
-                    Navigator.pushNamed(context, '/EnviromentRoles'),
-              ),
-              decoration: BoxDecorations.authBoxDecoration(),
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            ),
-          ],
-        ),
+          ),
+          const SizedBox(height: 40),
+          ElevatedButton(
+            child: const SizedBox(
+                width: double.infinity,
+                height: 50,
+                child: Center(child: Text("Continuar"))),
+            onPressed: () => Navigator.pushNamed(context, '/EnviromentRoles'),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          ),
+        ],
       ),
     );
   }
-  setState(String? Function() param0) {}
 }

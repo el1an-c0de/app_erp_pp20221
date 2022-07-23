@@ -1,4 +1,4 @@
-import '../Screens/screens.dart';
+import 'package:app_erp_pp20221/Screens/screens.dart';
 
 class DropdownButtonDecoration {
   static ShapeDecoration authDropdownButtonDecoration({Color? color}) {

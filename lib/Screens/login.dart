@@ -1,22 +1,24 @@
-import '../Screens/screens.dart';
+import 'Screens.dart';
 
 class Login extends StatelessWidget {
   const Login({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Body();
+    return const Body();
   }
 }
 
 //Clase donde visualizamos los textos de inicio y llamamos al formulario de login
 class Body extends StatelessWidget {
+  const Body({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Container(
+        SizedBox(
           width: 600,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -45,9 +47,10 @@ class Body extends StatelessWidget {
         Padding(
           padding: EdgeInsets.symmetric(
               vertical: MediaQuery.of(context).size.height / 6),
-          child: Container(
+          child: const SizedBox(
             width: 350,
-            child: _formLogin(), //Llamamos a la funcion donde se encunetra el formulario de Login
+            child:
+                FormLogin(), //Llamamos a la funcion donde se encunetra el formulario de Login
           ),
         )
       ],
@@ -56,82 +59,123 @@ class Body extends StatelessWidget {
 }
 
 //Formulario de Login, con sus lables y button para dirigirnos a la siguiente vista
-class _formLogin extends StatelessWidget {
+class FormLogin extends StatefulWidget {
+  const FormLogin({Key? key}) : super(key: key);
+
+  @override
+  State<FormLogin> createState() => FormLoginState();
+}
+
+class FormLoginState extends State<FormLogin> {
   //Controladores para la validacion de cada uno de los labels
-  final TextEditingController usernamecontroller = new TextEditingController();
-  final TextEditingController passwordcontroller = new TextEditingController();
+  final TextEditingController usernamecontroller = TextEditingController();
+
+  final TextEditingController passwordcontroller = TextEditingController();
+
+  bool ishiddenPassword = true;
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Form(
+    return Form(
         child: Column(
-          children: [
-            TextFormField(
-              controller: usernamecontroller,
-              autocorrect: false,
-              keyboardType: TextInputType.emailAddress,
-              //Llamamos a la clase InputDecorations para usar el estilo de esa clase
-              decoration: InputDecorations.authInputDecoration(
-                hintText: 'Example123',
-                labelText: 'Enter User ID',
-                suffixIcon: Icons.alternate_email_rounded,
-              ),
+      children: [
+        TextFormField(
+          controller: usernamecontroller,
+          autocorrect: false,
+          keyboardType: TextInputType.emailAddress,
+          //Llamamos a la clase InputDecorations para usar el estilo de esa clase
+          decoration: InputDecorations.authInputDecoration(
+            hintText: 'Example123',
+            labelText: 'Enter User ID',
+            prefixIcon: Icons.alternate_email_rounded,
+          ),
+        ),
+        const SizedBox(height: 30),
+        TextFormField(
+          controller: passwordcontroller,
+          //obscureText: ishiddenPassword, //Ocultar text del label password
+          obscureText: ishiddenPassword, //Ocultar text del label password
+          autocorrect: false,
+          keyboardType: TextInputType.emailAddress,
+
+          //Llamamos a la clase InputDecorations para usar el estilo de esa clase
+          decoration: InputDecoration(
+            hintText: '********',
+            labelText: 'Enter Password',
+            prefixIcon: const Icon(Icons.lock_outline_rounded),
+            suffixIcon: togglePassword(),
+            //--------------------DECORACIÓN DE LABEL PASSWORD
+            filled: true,
+            fillColor: Colors.blueGrey[50],
+            labelStyle: const TextStyle(
+              fontSize: 12,
+              color: Colors.grey,
             ),
-
-            SizedBox(height: 30),
-
-            TextFormField(
-              controller: passwordcontroller,
-              obscureText: true, //Ocultar text del label password
-              autocorrect: false,
-              keyboardType: TextInputType.emailAddress,
-              //Llamamos a la clase InputDecorations para usar el estilo de esa clase
-              decoration: InputDecorations.authInputDecoration(
-                hintText: '********',
-                labelText: 'Enter Password',
-                suffixIcon: Icons.lock_outline_rounded,
-              ),
-              autovalidateMode: AutovalidateMode.onUserInteraction,
-                validator: (value)=> value != null && value.length <8
-                  ? 'Ingresa un minimo de 8 caracteres' : null,
+            hintStyle: const TextStyle(
+              fontSize: 12,
+              color: Colors.grey,
             ),
-
-            SizedBox(height: 40),
-
-            Container(
-              child: ElevatedButton(
-                child:Container(
-                    width: double.infinity,
-                    height: 50,
-                    child: Center(child: Text("Sign In"))),
-                onPressed: () => Navigator.pushNamed(context, '/EnviromentRoles'),
-                //Diseño Antiguo
-                // style: ElevatedButton.styleFrom(
-                //   primary: Colors.blue,
-                //   onPrimary: Colors.white,
-                //   shape: RoundedRectangleBorder(
-                //     borderRadius: BorderRadius.circular(15),
-                //   ),
-                // ),
-              ),
-              decoration: BoxDecorations.authBoxDecoration(),
+            contentPadding: const EdgeInsets.only(left: 30),
+            enabledBorder: OutlineInputBorder(
+              borderSide:
+                  const BorderSide(color: Color.fromARGB(255, 236, 239, 241)),
+              borderRadius: BorderRadius.circular(15),
             ),
-
-            SizedBox(height: 20),
-
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            focusedBorder: OutlineInputBorder(
+              borderSide:
+                  const BorderSide(color: Color.fromARGB(255, 236, 239, 241)),
+              borderRadius: BorderRadius.circular(15),
             ),
-            TextButton(
-              style: TextButton.styleFrom(
-                textStyle: const TextStyle(fontSize: 12),
-              ),
-              onPressed: () => Navigator.pushNamed(context, '/Configurations'),
-              child: const Text('Configuracion de Usuarios'),
-            ),
-          ],
-        )
-      ),
-    );
+            //--------------------DECORACIÓN DE LABEL PASSWORD^^^^
+          ),
+
+          autovalidateMode: AutovalidateMode.onUserInteraction,
+
+          validator: (value) => value != null && value.length < 8
+              ? 'Ingresa un minimo de 8 caracteres'
+              : null,
+        ),
+        const SizedBox(height: 40),
+        ElevatedButton(
+          child: const SizedBox(
+              width: double.infinity,
+              height: 50,
+              child: Center(child: Text("Sign In"))),
+          onPressed: () => Navigator.pushNamed(context, '/EnviromentRoles'),
+          //Diseño Antiguo
+          // style: ElevatedButton.styleFrom(
+          //   primary: Colors.blue,
+          //   onPrimary: Colors.white,
+          //   shape: RoundedRectangleBorder(
+          //     borderRadius: BorderRadius.circular(15),
+          //   ),
+          // ),
+        ),
+        const SizedBox(height: 20),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        ),
+        TextButton(
+          style: TextButton.styleFrom(
+            textStyle: const TextStyle(fontSize: 12),
+          ),
+          onPressed: () => Navigator.pushNamed(context, '/Configurations'),
+          child: const Text('Configuracion de Usuarios'),
+        ),
+      ],
+    ));
+  }
+
+  Widget togglePassword() {
+    return IconButton(
+        onPressed: () {
+          setState(() {
+            ishiddenPassword = !ishiddenPassword;
+          });
+        },
+        icon: ishiddenPassword
+            ? const Icon(Icons.visibility)
+            : const Icon(Icons.visibility_off),
+        color: Colors.grey);
   }
 }

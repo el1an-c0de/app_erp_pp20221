@@ -1,4 +1,4 @@
-import '../Screens/screens.dart';
+import '../Screens/Screens.dart';
 
 class Styles {
   static Color scaffoldBackgroundColor = const Color(0xFFe0efff);
@@ -16,7 +16,7 @@ class Styles {
   static ScrollbarThemeData scrollbarTheme =
       const ScrollbarThemeData().copyWith(
     thumbColor: MaterialStateProperty.all(defaultYellowColor),
-    isAlwaysShown: false,
+    // isAlwaysShown: false,
     interactive: true,
   );
 }

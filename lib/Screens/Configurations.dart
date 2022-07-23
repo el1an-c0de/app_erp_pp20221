@@ -1,11 +1,11 @@
-import '../Screens/screens.dart';
+import 'Screens.dart';
 
 class Configurations extends StatelessWidget {
   const Configurations({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return HomePage();
+    return const HomePage();
   }
 }
 
@@ -25,7 +25,7 @@ class _HomePageState extends State<HomePage> {
       body: SafeArea(
         child: AppLayout(
           content: Row(
-            children: [],
+            children: const [],
           ),
         ),
       ),

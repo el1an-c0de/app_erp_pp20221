@@ -5,11 +5,13 @@ class NavBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Menu();
+    return const Menu();
   }
 }
 
 class Menu extends StatelessWidget {
+  const Menu({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -38,6 +40,7 @@ class Menu extends StatelessWidget {
   }
 
   Widget _menuItem({String title = 'Title Menu', isActive = false}) {
+    var titles = title;
     return Padding(
       padding: const EdgeInsets.only(right: 75),
       child: MouseRegion(
@@ -45,24 +48,25 @@ class Menu extends StatelessWidget {
         child: Column(
           children: [
             Text(
-              '$title',
+              titles,
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 color: isActive ? Colors.blue : Colors.grey,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 6,
             ),
             isActive
                 ? Container(
-                    padding: EdgeInsets.symmetric(horizontal: 12, vertical: 2),
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 12, vertical: 2),
                     decoration: BoxDecoration(
                       color: Colors.blue,
                       borderRadius: BorderRadius.circular(30),
                     ),
                   )
-                : SizedBox()
+                : const SizedBox()
           ],
         ),
       ),
@@ -71,11 +75,11 @@ class Menu extends StatelessWidget {
 
   Widget _registerButton() {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 30, vertical: 8),
+      padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 8),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(15),
-        boxShadow: [
+        boxShadow: const [
           BoxShadow(
             color: Color.fromARGB(255, 236, 236, 236),
             spreadRadius: 10,
@@ -83,7 +87,7 @@ class Menu extends StatelessWidget {
           ),
         ],
       ),
-      child: Text(
+      child: const Text(
         'Registro',
         style: TextStyle(
           fontWeight: FontWeight.bold,

@@ -1,5 +1,4 @@
-//import 'package:flutter/cupertino.dart';
-import '../Screens/screens.dart';
+import 'package:app_erp_pp20221/Screens/screens.dart';
 
 class TopAppBar extends StatelessWidget {
   const TopAppBar({Key? key}) : super(key: key);
@@ -7,14 +6,14 @@ class TopAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      children: [
+      children: const [
         Flexible(
           child: BarChartWithTitle(
             title: "ADMINISTRACIÓN",
             subtitle: "USUARIOS",
           ),
         ),
-        const SizedBox(
+        SizedBox(
           width: 10,
         ),
       ],
