@@ -1,4 +1,4 @@
-import 'package:app_erp_pp20221/Screens/screens.dart';
+import 'package:app_erp_pp20221/Screens/Screens.dart';
 import 'package:app_erp_pp20221/Screens/environmentRoles.dart';
 
 void main() {
@@ -19,9 +19,9 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/SignIn',
       routes: {
-        '/SignIn': (_) => MyHomePage(),
-        '/EnviromentRoles': (_) => SignInBusiness(),
-        '/Configurations': (_) => Configu(),
+        '/SignIn': (_) => const MyHomePage(),
+        '/EnviromentRoles': (_) => const SignInBusiness(),
+        '/Configurations': (_) => const Configu(),
       },
       //home: MyHomePage(),
     );
@@ -37,7 +37,7 @@ class MyHomePage extends StatelessWidget {
       body: ListView(
         padding: EdgeInsets.symmetric(
             horizontal: MediaQuery.of(context).size.width / 8),
-        children: [
+        children: const [
           NavBar(),
           Login(),
           Footer(),
@@ -56,7 +56,7 @@ class SignInBusiness extends StatelessWidget {
       body: ListView(
         padding: EdgeInsets.symmetric(
             horizontal: MediaQuery.of(context).size.width / 8),
-        children: [
+        children: const [
           NavBar(),
           EnviromentRoles(),
           Footer(),
@@ -71,7 +71,7 @@ class Configu1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: SafeArea(
         child: Configu(),
       ),
@@ -90,7 +90,7 @@ class Configu extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Configurations(),
+      home: const Configurations(),
     );
   }
 }
